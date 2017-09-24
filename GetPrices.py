@@ -10,10 +10,40 @@ import logging
 
 class ClearHealthCosts:
 
-    #------------------------------------------------------------------------------
-    #------------------------------------------------------------------------------
+    #---------------------------------------------------------------------------
+    # PUBLIC METHODS
+    #---------------------------------------------------------------------------
+    def prices(self):
+        return self._prices
+
+    def clear_prices(self):
+        self._prices = []
+        return self
+
+    def get_prices(self, condition, zip, range):
+        url = self._get_base_url(condition, zip, range)
+        result = requests.get(url)
+
+        if result.status_code == 200:
+            self._prices += self._parse_pricelist(result.content)
+
+        return self
+
+    def get_sleep_prices(self, zip, range=100):
+        return self.get_prices('sleep', zip, range)
+
+    #---------------------------------------------------------------------------
+    # PRIVATE METHODS
+    #---------------------------------------------------------------------------
+
+    _prices = []
+    _base_url = 'https://clearhealthcosts.com/search/?'
+
+    def __init__(self):
+        self.clear_prices()
+
     def _get_base_url(self, query, zip_code, radius):
-        return 'https://clearhealthcosts.com/search/?query='+str(query)+'&zip_code='+str(zip_code)+'&radius='+str(radius)+'&submit='
+        return self._base_url+'query='+str(query)+'&zip_code='+str(zip_code)+'&radius='+str(radius)+'&submit='
 
     def _parse_price(self, item):
         charged = item.find('div','price-badge price-charged')
@@ -34,17 +64,3 @@ class ClearHealthCosts:
             prices.append(price)
 
         return prices
-
-    #------------------------------------------------------------------------------
-    #------------------------------------------------------------------------------
-    def get_prices(self, condition, zip, range):
-        url = self._get_base_url(condition, zip, range)
-        result = requests.get(url)
-
-        if result.status_code != 200:
-            return []
-        else:
-            return self._parse_pricelist(result.content)
-
-    def get_sleep_prices(self, zip, range=100):
-        return self.get_prices('sleep', zip, range)

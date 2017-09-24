@@ -1,5 +1,6 @@
 from GetPrices import ClearHealthCosts
+
 chc = ClearHealthCosts()
-chc._get_base_url('sleep','10001',100)
-prices = chc.get_sleep_prices('10001',100)
-print(prices)
+chc.get_sleep_prices('10001',100)
+for price in chc.prices():
+    print("{:7.2f} {:60.60} {:60.60}".format(price[0],price[1],price[2]))
