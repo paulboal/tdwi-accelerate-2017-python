@@ -20,17 +20,21 @@ class ClearHealthCosts:
         self._prices = []
         return self
 
-    def get_prices(self, condition, zip, range):
-        url = self._get_base_url(condition, zip, range)
+    def get_prices(self, condition, zip, radius):
+        url = self._get_base_url(condition, zip, radius)
         result = requests.get(url)
 
         if result.status_code == 200:
-            self._prices += self._parse_pricelist(result.content)
+            prices = self._parse_pricelist(result.content)
+            for i in range(0,len(prices)):
+                prices[i] += [condition, zip, radius]
+
+            self._prices += prices
 
         return self
 
-    def get_sleep_prices(self, zip, range=100):
-        return self.get_prices('sleep', zip, range)
+    def get_sleep_prices(self, zip, radius=100):
+        return self.get_prices('sleep', zip, radius)
 
     #---------------------------------------------------------------------------
     # PRIVATE METHODS
