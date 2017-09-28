@@ -6,7 +6,7 @@
 
 from bs4 import BeautifulSoup
 import requests
-import logging
+import pandas as pd
 
 class ClearHealthCosts:
 

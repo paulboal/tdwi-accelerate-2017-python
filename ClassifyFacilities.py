@@ -40,28 +40,25 @@ class ClassifyFacilities:
         return self
 
     def print_clusters(self):
-        print("Top terms per cluster:")
-        print()
-        #sort cluster centers by proximity to centroid
-        order_centroids = self.get_centroids()
-        vocab_frame = self.get_vocab()
-        terms = self.get_vectorizer().get_feature_names()
-        facilities = {'facility': self._facilities, 'cluster': self._clusters}
-        frame = pd.DataFrame(facilities, index=self.get_clusters(), columns=['facility', 'cluster'] )
+        if not self._clusters:
+            print("Clustering has not been completed.")
+            return
 
-        for i in range(self._num_clusters):
-            print("Cluster %d words:" % i, end='')
+        df = pd.DataFrame({
+            'facility': self._facilities,
+            'cluster': self.get_clusters()
+        })
 
-            for ind in order_centroids[i, :6]: #replace 6 with n words per cluster
-                print(' %s' % vocab_frame.ix[terms[ind].split(' ')].values.tolist()[0][0].encode('utf-8', 'ignore'), end=',')
-            print() #add whitespace
-            print() #add whitespace
+        cluster_names = self.get_cluster_names()
 
-            print("Cluster %d titles:" % i, end='')
-            for facility in frame.ix[i]['facility'].values.tolist():
-                print(' %s,' % facility, end='')
-            print() #add whitespace
-            print() #add whitespace
+        df['cluster_name'] = df.cluster.map(cluster_names)
+        clusters = df.groupby('cluster_name').agg(lambda x: ",".join(x.unique()))
+        for cluster_name, row in clusters.iterrows():
+            print('-'*80)
+            print(cluster_name)
+            print('-'*80)
+            print(row['facility'])
+            print()
 
     def get_vocab(self):
         """
@@ -81,11 +78,22 @@ class ClassifyFacilities:
     def get_centroids(self):
         return self._km.cluster_centers_.argsort()[:, ::-1]
 
+    def get_feature_names(self):
+        self.get_vectorizer().get_feature_names()
+
     def get_dist(self):
         return self._dist
 
     def get_km(self):
         return self._km
+
+    def get_cluster_names(self):
+        centroids = self.get_centroids()
+        feature_names = self.get_vectorizer().get_feature_names()
+        names = {}
+        for i in range(len(centroids)):
+            names[i]= str(i) + ":" + ",".join([feature_names[t] for t in centroids[i, :10]])
+        return names
 
     def _cluster(self):
         self._dist = 1 - cosine_similarity(self._tfidf_matrix)
