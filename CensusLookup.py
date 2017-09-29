@@ -9,3 +9,9 @@ class CensusLookup:
 
     def get_data(self):
         return self._df
+
+    def get_value(self, zip, field):
+        try:
+            return self._df.loc[zip][field]
+        except:
+            return ''
