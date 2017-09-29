@@ -12,3 +12,8 @@ At a high level, you'll need the following setup and running on your computer.
   * *nltk* - Natural language processing (NLP) algorithms and content
   * *sklearn* - Machine learning algorithms like k-means clustering
   * *BeautifulSoup* - Library to parse HTML documents for web scraping
+* Google Geocoding API Key [AIzaSyCsGHgVeGETA9Q_gtrwJmqh1G_V1HNv3qE]
+* Download from US Census [included in GitHub]
+  * "Profile of General Population and Housing Characteristics: 2010"
+  * DEC_10_DP_G001_with_ann.csv
+  * DEC_10_DP_DPDP1_with_ann.csv <--
