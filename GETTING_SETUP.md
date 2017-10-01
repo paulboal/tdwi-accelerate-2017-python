@@ -87,7 +87,7 @@ If you don't have a GitHub.com account or a git client application, you can also
 
 > https://github.com/paulboal/tdwi-accelerate-2017-python/archive/master.zip
 
-Note where this directory is on your machine.  You'll need to know that location in order to start up the Jupyter web notebook correctly.
+Consider putting this folder in your Home directory or under _Documents_ on Windows.  Note where this directory is on your machine.  You'll need to know that location in order to start up the Jupyter web notebook correctly.
 
 
 # Getting Jupyter Started
@@ -99,11 +99,16 @@ To start Jupyter running locally for this course, you'll want to launch Jupyter 
 
 ## On Linux or MacOS
 1. Launch a terminal
-2. `cd <where you downloaded the repository>`
+2. `cd <where you downloaded the repository>` for example: `cd /Users/myname/Documents/tdwi-accelerate-2017-python`
 3. `jupyter notebook`
 
 ## On Windows
+1. Launch Anaconda Prompt from the Start menu
+2. `cd <where you downloaded the repository>` for example: `cd C:\Users\myname\Documents\tdwi-accelerate-2017-python`
+3. `jupyter notebook`
 
+## On Windows with Anaconda
+If you've installed Anaconda on Windows, you'll have a Start Menu icon to launch Jupyter directly.  This will work fine if you saved the GitHub repository to a directory somewhere within your Home directory.  By default Anaconda launches Jupyter from your Home directory, so you'll see things like _Documents_, _Downloads_, etc.  Just click the folder to navigate to where the repository is.
 
 When Jupyter launches, it should automatically launch your web browswer as well, and pull up a page that looks like the screenshot below.
 
