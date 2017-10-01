@@ -4,21 +4,21 @@ This document takes you through the general steps of setting up your environment
 At a high level, you'll need the following setup and running on your computer.
 
 1. [Python 3.x](#python-3.x)
-2. [The pip Python package manager][#pip-package-manager]
+2. [The pip Python package manager](#pip-package-manager)
 3. [Python Libraries](#python-libraries)
-  * *jupyter* - The web-based, interactive Python notebook
-  * *pandas* - Data manipulation based on dataframe structures
-  * *seaborn* - Create plots and charts for visualization
-  * *nltk* - Natural language processing (NLP) algorithms and content
-  * *sklearn* - Machine learning algorithms like k-means clustering
-  * *BeautifulSoup* - Library to parse HTML documents for web scraping
-  * *plotly* - Access to Plot.ly web service and plotting library
+    * *jupyter* - The web-based, interactive Python notebook
+    * *pandas* - Data manipulation based on dataframe structures
+    * *seaborn* - Create plots and charts for visualization
+    * *nltk* - Natural language processing (NLP) algorithms and content
+    * *sklearn* - Machine learning algorithms like k-means clustering
+    * *BeautifulSoup* - Library to parse HTML documents for web scraping
+    * *plotly* - Access to Plot.ly web service and plotting library
 4. [Google Geocoding API Key](#google-geocoding)
 5. [Plotly account and API Key](#plotly)
 6. [Downloaded data from US Census](#us-census-data) [included in GitHub]
-  * "Profile of General Population and Housing Characteristics: 2010"
-  * DEC_10_DP_G001_with_ann.csv
-  * DEC_10_DP_DPDP1_with_ann.csv
+    * "Profile of General Population and Housing Characteristics: 2010"
+    * DEC_10_DP_G001_with_ann.csv
+    * DEC_10_DP_DPDP1_with_ann.csv
 7. [Downloading this Repository](#downloading-this-repository)
 8. [Getting Jupyter Started](#getting-jupyter-started)
 
