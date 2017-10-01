@@ -18,7 +18,10 @@ In this hands-on 90 min course, participants will get a quick overview of the la
  * Participants will gain an understanding of how Python can provide rich data structures and functions.
 
 # Structure for the Quick Camp
-For this coding camp, we're going to the following real-world scenario to keep things interesting: We all know that the price of healthcare in the US is both out of control as well as highly variable from one provider to the next, even within a tight geographic region.  We're going to use Python to retrieve a list of facilities that all provide sleep study procedures.  We'll automatically look up some information about those providers and the demographics of that region using other websites and merge the data together.  We'll do some basic blots of the data to see if there are any interesting trends, and maybe even build a predictive model.
+For this coding camp, we're going to the following real-world scenario to keep things interesting: We all know that the price of healthcare in the US is both out of control as well as highly variable from one provider to the next, even within a tight geographic region.  We're going to use Python to retrieve a list of facilities that all provide sleep study procedures.  We'll automatically look up some information about those providers and the demographics of that region using other websites and merge the data together.  We'll do some basic plots of the data to see if there are any interesting trends or conclusions we can draw.
+
+# Getting Started
+See the [Getting Setup](GETTING_SETUP.md) file for instructions on how to get your environment up and running for this course.
 
 # For more information
 You can visit http://tdwi.org for additional resources and educational opportunities or get in touch with Paul Boal
