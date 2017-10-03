@@ -1,5 +1,5 @@
-# Introduction
-This document takes you through the general steps of setting up your environment to run through the Python Quick Camp.  If you run into trouble, searching your error message in Google should help.
+# TDWI Accelerate Python Quick Camp
+This document takes you through the general steps of setting up your environment to run through the [TDWI Accelerate - Seattle 2017 Python Quick Camp](https://tdwi.org/events/accelerate/seattle/sessions/tuesday/adv-all-python-quick-camp.aspx).  If you run into trouble, searching your error message in Google should help.
 
 At a high level, you'll need the following setup and running on your computer.
 
@@ -43,13 +43,19 @@ The [official instructions for installing pip](https://pip.pypa.io/en/stable/ins
 Once you have `pip` or `conda` installed, you'll need to install the packages that will be required for this course.  You can get them all in one command.
 
 If you only have Python 3.x installed on your system:
-> `pip install jupyter pandas seaborn nltk sklearn BeautifulSoup plotly`
+```bash
+pip install jupyter pandas seaborn nltk sklearn BeautifulSoup plotly
+```
 
 If you have Python 2.x and 3.x both installed, you may need to specify the 3.x version of `pip`:
-> `pip3 install jupyter pandas seaborn nltk sklearn BeautifulSoup plotly`
+```bash
+pip3 install jupyter pandas seaborn nltk sklearn BeautifulSoup plotly
+```
 
 If you installed Python via Anaconda:
-> `conda install jupyter pandas seaborn nltk sklearn BeautifulSoup plotly`
+```bash
+conda install jupyter pandas seaborn nltk sklearn BeautifulSoup plotly
+```
 
 
 # Google Geocoding
@@ -65,7 +71,9 @@ Python has several built-in libraries that are excellent for plotting graphics i
 
 This key needs to be setup in the right place on your local machine by following [the official instructions from Plotly](https://plot.ly/python/getting-started/#initialization-for-online-plotting).  The command you'll need to run will look something like:
 
-> `plotly.tools.set_credentials_file(username='myName', api_key='myAPIKJey')`
+```python
+plotly.tools.set_credentials_file(username='myName', api_key='myAPIKJey')
+```
 
 
 # US Census Data
@@ -80,12 +88,14 @@ You don't necessarily need a GitHub.com account to download a copy of this repos
 ## Option A: If you have a github.com account
 Using a git client or the git command line, you can find this repository at git@github.com:paulboal/tdwi-accelerate-2017-python.git.  This will create a new directory called `tdwi-accelerate-2017-python`.
 
-> `git clone git@github.com:paulboal/tdwi-accelerate-2017-python.git`
+```bash
+git clone git@github.com:paulboal/tdwi-accelerate-2017-python.git
+```
 
 ## Option B: Without a github.com account
 If you don't have a GitHub.com account or a git client application, you can also download the contents of this repository using the url below.  Save this file to your machine and uncompress it.  You should end up with a directory called `tdwi-accelerate-2017-python`.
 
-> https://github.com/paulboal/tdwi-accelerate-2017-python/archive/master.zip
+https://github.com/paulboal/tdwi-accelerate-2017-python/archive/master.zip
 
 Consider putting this folder in your Home directory or under _Documents_ on Windows.  Note where this directory is on your machine.  You'll need to know that location in order to start up the Jupyter web notebook correctly.
 
