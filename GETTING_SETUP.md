@@ -11,7 +11,7 @@ At a high level, you'll need the following setup and running on your computer.
     * *seaborn* - Create plots and charts for visualization
     * *nltk* - Natural language processing (NLP) algorithms and content
     * *sklearn* - Machine learning algorithms like k-means clustering
-    * *BeautifulSoup* - Library to parse HTML documents for web scraping
+    * *BeautifulSoup4* - Library to parse HTML documents for web scraping
     * *plotly* - Access to Plot.ly web service and plotting library
 4. [Google Geocoding API Key](#google-geocoding)
 5. [Plotly account and API Key](#plotly)
