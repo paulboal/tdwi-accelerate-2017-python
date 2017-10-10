@@ -1,7 +1,10 @@
 # TDWI Accelerate Python Quick Camp
-This document takes you through the general steps of setting up your environment to run through the [TDWI Accelerate - Seattle 2017 Python Quick Camp](https://tdwi.org/events/accelerate/seattle/sessions/tuesday/adv-all-python-quick-camp.aspx).  If you run into trouble, searching your error message in Google should help.
+This document takes you through the general steps of setting your own personal environment to run through the [TDWI Accelerate - Seattle 2017 Python Quick Camp](https://tdwi.org/events/accelerate/seattle/sessions/tuesday/adv-all-python-quick-camp.aspx).  
 
-At a high level, you'll need the following setup and running on your computer.
+While your experience and ability to take the lessons home with you will be better if you follow these instructions, not everyone may be able to install all of the required software on their personal machine.  A temporary demo environment will be available for anyone who has a laptop that can connect to the available WiFi network.
+
+# Setup Instructions
+At a high level, you'll need the following setup and running on your computer.  More detailed instructions follow, but if you run into trouble, searching your error message in Google should help.
 
 1. [Python 3.x](#python-3.x)
 2. [The pip Python package manager](#pip-package-manager)
@@ -46,17 +49,17 @@ Once you have `pip` or `conda` installed, you'll need to install the packages th
 
 If you only have Python 3.x installed on your system:
 ```bash
-pip install jupyter pandas seaborn nltk sklearn BeautifulSoup plotly
+pip install jupyter pandas seaborn nltk scikit-learn BeautifulSoup4 openpyxl xlrd plotly
 ```
 
 If you have Python 2.x and 3.x both installed, you may need to specify the 3.x version of `pip`:
 ```bash
-pip3 install jupyter pandas seaborn nltk sklearn BeautifulSoup plotly
+pip3 install jupyter pandas seaborn nltk scikit-learn BeautifulSoup4 openpyxl xlrd plotly
 ```
 
 If you installed Python via Anaconda:
 ```bash
-conda install jupyter pandas seaborn nltk sklearn BeautifulSoup plotly
+conda install jupyter pandas seaborn nltk scikit-learn BeautifulSoup4 openpyxl xlrd plotly
 ```
 
 
