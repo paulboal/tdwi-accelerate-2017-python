@@ -8,6 +8,7 @@ At a high level, you'll need the following setup and running on your computer.
 3. [Python Libraries](#python-libraries)
     * *jupyter* - The web-based, interactive Python notebook
     * *pandas* - Data manipulation based on dataframe structures
+    * *openpyxl* - Read/Write XLSX files
     * *seaborn* - Create plots and charts for visualization
     * *nltk* - Natural language processing (NLP) algorithms and content
     * *scikit-learn* - Machine learning algorithms like k-means clustering
