@@ -1,7 +1,7 @@
 # TDWI Accelerate Python Quick Camp
 This document takes you through the general steps of setting your own personal environment to run through the [TDWI Accelerate - Seattle 2017 Python Quick Camp](https://tdwi.org/events/accelerate/seattle/sessions/tuesday/adv-all-python-quick-camp.aspx).  
 
-While your experience and ability to take the lessons home with you will be better if you follow these instructions, not everyone may be able to install all of the required software on their personal machine.  A temporary demo environment will be available for anyone who has a laptop that can connect to the available WiFi network.
+While your experience and ability to take the lessons home with you will be better if you follow these instructions, not everyone may be able to install all of the required software on their personal machine.  *A temporary demo environment will be available for anyone who has a laptop that can connect to the available WiFi network.*
 
 # Setup Instructions
 At a high level, you'll need the following setup and running on your computer.  More detailed instructions follow, but if you run into trouble, searching your error message in Google should help.
